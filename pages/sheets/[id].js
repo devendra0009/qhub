@@ -9,7 +9,7 @@ import { TbLoader } from "react-icons/tb";
 import ThemeToggler from "../../components/ThemeToggler";
 
 export async function getStaticPaths() {
-  const response = await axios.get(`http://localhost:3000/api/sheetlist`);
+  const response = await axios.get(`${BASE_URL}/api/sheetlist`);
   const sheets = response.data;
 
   const paths = sheets.map((sheet) => ({
@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const response = await axios.get(
-    `http://localhost:3000/api/sheets/${params.id}`
+    `${BASE_URL}/api/sheets/${params.id}`
   );
   const sheet = response.data;
 

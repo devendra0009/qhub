@@ -10,7 +10,6 @@ const index = () => {
     <>
       <Header>
         <div className="tri2do">TRI2DO</div>
-        {/* <ThemeToggler/> */}
       </Header>
       <Container>
         {SheetList.map((sheet) => {

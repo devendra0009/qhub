@@ -387,7 +387,7 @@ const AmanDsaQuestions = [
     id: 55,
     topic: "2D Arrays",
     problem:
-      "Given a Matrix of ‘O’ and ‘X’, Replace ‘O’ with ‘X’ if Surrounded by ‘X’",
+      "Given a Matrix of O and X, Replace O with X if Surrounded by X",
     link: "htps:/www.geeksforgeeks.org/given-matrix-o-x-replace-o-x-surrounded-x/",
     solved: "false",
   },
@@ -1673,7 +1673,7 @@ const AmanDsaQuestions = [
   {
     id: 237,
     topic: "Heaps & Hashing",
-    problem: "K’th Smallest/Largest Element in Unsorted Array",
+    problem: "Kth Smallest/Largest Element in Unsorted Array",
     link: "https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/",
     solved: false,
   },
@@ -1703,7 +1703,7 @@ const AmanDsaQuestions = [
   {
     id: 241,
     topic: "Heaps & Hashing",
-    problem: "K’th largest element in a stream",
+    problem: "Kth largest element in a stream",
     link: "https://www.geeksforgeeks.org/kth-largest-element-in-a-stream/",
     solved: false,
   },
@@ -1906,7 +1906,7 @@ const AmanDsaQuestions = [
   {
     id: 270,
     topic: "Graphs",
-    problem: "Dijkstra’s shortest path algorithm",
+    problem: "Dijkstas shortest path algorithm",
     link: "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/",
     solved: false,
   },
@@ -2532,7 +2532,7 @@ const AmanDsaQuestions = [
     id: 359,
     topic: "DP",
     problem:
-      "Largest area rectangular sub-matrix with equal number of 1’s and 0’s",
+      "Largest area rectangular sub-matrix with equal number of1s and0s",
     link: "htps:/www.geeksforgeeks.org/largest-area-rectangular-sub-matrix-equal-number-1s-0s/",
     solved: "false",
   },
