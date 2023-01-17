@@ -47,10 +47,10 @@ const CheckBox = ({ qid, sheetId, solved, barHandle }) => {
 const Container = styled.div`
   @supports (-webkit-appearance: none) or (-moz-appearance: none) {
     .checkbox-wrapper-13 input[type="checkbox"] {
-      --active: var(--third);
+      --active: #29c5f6;
       --active-inner: #fff;
       --focus: 2px rgba(39, 94, 254, 0.3);
-      --border: #bbc1e1;
+      --border: black;
       --border-hover: #275efe;
       --background: #fff;
       --disabled: #f6f8ff;

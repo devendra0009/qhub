@@ -23,7 +23,9 @@ body {
 }
 
 body {
-  background-color: var(--bgcolor);
+  background-color: whitesmoke;
+  font-weight:bold;
+  /* background-image: url('https://thumbs.dreamstime.com/b/decorative-blue-background-abstract-grunge-relief-light-texture-rough-colored-christmas-copy-space-design-wide-horizontal-101941671.jpg'); */
 }
 
 .dark-theme {

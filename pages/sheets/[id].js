@@ -5,7 +5,8 @@ import React, { useEffect, useState } from "react";
 import Question from "../../components/Question";
 import Sidebar from "../../components/Sidebar";
 import Bar from "../../components/Bar";
-import { TbLoader } from "react-icons/Tb";
+import { TbLoader } from "react-icons/tb";
+import ThemeToggler from "../../components/ThemeToggler";
 
 export async function getStaticPaths() {
   const response = await axios.get(`http://localhost:3000/api/sheetlist`);
@@ -37,7 +38,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
-const sheet = ({ sheet, sheetId }) => {
+const Sheet = ({ sheet, sheetId }) => {
   const [search, setSearch] = useState("");
   const [topic, setTopic] = useState("");
   const [data, setData] = useState(false);
@@ -93,10 +94,12 @@ const sheet = ({ sheet, sheetId }) => {
         ) : (
           <>
             <Navbar>
-              <div className="logo">
+              <div style={{display:"flex", marginTop:'10px'}}>
                 <Link href="/">
-                  <span>TRI2DO</span>
+                  <span >TRI2DO</span>
                 </Link>
+              <div style={{marginTop: "8px" ,marginLeft: '102px'}}> <ThemeToggler/> </div>
+              <div className="divider"></div>
               </div>
               <input
                 type="text"
@@ -110,7 +113,7 @@ const sheet = ({ sheet, sheetId }) => {
                 name={sheet.name}
                 handleClick={handleClick}
               />
-              <Contain>
+              <div style={{width:"100%"}}>
                 <Bar
                   topic={topic}
                   totalQuestions={sheet.length}
@@ -118,6 +121,7 @@ const sheet = ({ sheet, sheetId }) => {
                   sheetname={sheet.name}
                   removeTopic={removeTopic}
                 />
+              <Contain>
                 {filteredQuestions.map((item) => {
                   return (
                     <Question
@@ -132,6 +136,7 @@ const sheet = ({ sheet, sheetId }) => {
                   );
                 })}
               </Contain>
+              </div>
             </Content>
           </>
         )}
@@ -145,8 +150,7 @@ const Contain = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1rem 2rem;
+  gap: 0.5rem;
   overflow-y: scroll;
 `;
 
@@ -155,7 +159,7 @@ const Content = styled.div`
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-color: var(--grey);
+  ${'' /* background-color: var(--grey); */}
 `;
 
 const Navbar = styled.div`
@@ -165,22 +169,33 @@ const Navbar = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background-color: var(--bgcolor);
-  color: var(--primary);
+  ${'' /* font-family: 'Josefin Sans', sans-serif; */}
+  ${'' /* background-color: var(--bgcolor); */}
+      color: #4285F4;
   span {
     font-size: 32px;
     font-family: "Bree Serif", sans-serif;
     &:hover {
-      color: var(--third);
+  color:  #89cff0;
     }
+  }
+  .divider{
+    width: 30vh;
+    margin-top: 31px;
+    border-bottom: 2px solid black;
+    position: relative;
+    left: -269px;
+    top: 8px;
+
   }
   input {
     padding: 0.5rem;
     width: 30%;
-    background: transparent;
+    ${'' /* background: transparent; */}
     border: none;
-    border-bottom: 2px solid var(--fourth);
-    color: var(--text);
+    border-bottom: 2px solid #4285F4;
+    border-right: 2px solid #4285F4;
+    color: black;
     font-size: 16px;
     &:focus {
       outline: none;
@@ -212,4 +227,4 @@ const Container = styled.div`
   }
 `;
 
-export default sheet;
+export default Sheet;

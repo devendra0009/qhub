@@ -35,18 +35,22 @@ const Bar = ({
 
 const Container = styled.div`
   width: 100%;
+  ${'' /* position:fixed; */}
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 2rem;
-  background-color: var(--bgcolor);
+  ${'' /* background-color: var(--bgcolor); */}
   color: var(--text);
   border-radius: 5px;
   .topic {
     padding: 0.5rem;
-    background: transparent;
-    color: var(--text);
-    border: 2px solid var(--third);
+    background: #89cff0;
+    border-radius:12px;
+    font-weight:bold;
+    color: black;
+    border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +66,7 @@ const Container = styled.div`
     gap: 1rem;
     width: 60%;
     .progress-bar {
-      background: var(--grey);
+      background: #89cff0;
       justify-content: flex-start;
       border-radius: 100px;
       align-items: center;
@@ -72,7 +76,7 @@ const Container = styled.div`
       width: 100%;
       .progress-value {
         border-radius: 100px;
-        background: var(--third);
+        background: #0000E7;
         height: 5px;
         width: ${({ width }) => width}%;
         transition: 0.5s ease-out;

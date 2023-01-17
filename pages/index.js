@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import React from "react";
 import Footer from "../components/Footer";
 import SheetBox from "../components/SheetBox";
-import ThemeToggler from "../components/ThemeToggler";
+// import ThemeToggler from "../components/ThemeToggler";
 import SheetList from "../data/SheetList";
 
 const index = () => {
@@ -10,7 +10,7 @@ const index = () => {
     <>
       <Header>
         <div className="tri2do">TRI2DO</div>
-        <ThemeToggler />
+        {/* <ThemeToggler/> */}
       </Header>
       <Container>
         {SheetList.map((sheet) => {
